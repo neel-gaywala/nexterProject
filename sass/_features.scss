@@ -1,0 +1,35 @@
+.features {
+    margin: 15rem 0;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+    grid-gap: 6rem;
+    
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: [grid1-start] min-content [grid1-end grid2-start] 1fr [grid2-end];
+    grid-template-rows: min-content 1fr;
+    grid-column-gap: 2.5rem;
+    align-items: center;
+
+    &__icon {
+        fill: $color-primary;
+        width: 5rem;
+        height: 5rem;        
+
+        path {
+            transform: translate(15%, 5%);            
+        }
+
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        grid-column: grid2-start / grid2-end;
+    }
+
+}
